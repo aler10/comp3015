@@ -3,23 +3,57 @@
 
 function getDayOfTheWeek($year, $month, $day){
   
+  function isLeapYear($year){
+    if($year % 4 == 0){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
     $a = $year%100;
     $twelves = $a / 12;
     $remainder = $a % 12;
     $fours = $remainder / 4;
+
+    $total = $twelves + $remainder + $fours + $day;
     
+    if ($month == 1 || 10 ){
+       $total = $total + 1;
+    } else if ($month == 2 || 3 || 11){
+      $total = $total + 4;
+    } else if ($month == 4 || 7){
+      $total = $total + 0;
+    } else if ($month == 5){
+      $total = $total + 2;
+    } else if ($month == 6) {
+      $total = $total + 5;
+    } else if ($month == 8){
+      $total = $total + 3;
+    } else if ($month == 9 || 12){
+      $total = $total + 6;
+    }
 
-    if ($month )
-    
-
-
-
-
+    $total2 = $total % 7;
+  
+    if ($total2 == 0){
+      echo "Saturday";
+    } else if ($total2 == 1){
+      echo "Sunday";
+    } else if ($total2 == 2){
+      echo "Monday";
+    } else if ($total2 == 3){
+      echo "Tuesday";
+    } else if ($total2 == 4){
+      echo "Wednesday";
+    } else if ($total2 == 5){
+      echo "Thursday";
+    } else if ($total2 == 6){
+      echo "Friday";
+    }
 
 }
   getDayOfTheWeek(2022, 01, 01);
-
-
 
 
 function makeCalendar(){
@@ -94,8 +128,5 @@ function makeCalendar(){
   }
 
    makeCalendar();
-    
-
-
 
 ?>
