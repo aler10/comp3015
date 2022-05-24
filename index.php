@@ -1,15 +1,6 @@
 <?php 
 
-
 function getDayOfTheWeek($year, $month, $day){
-  
-  function isLeapYear($year){
-    if($year % 4 == 0){
-      return true;
-    } else {
-      return false;
-    }
-  }
   
     $a = $year%100;
     $twelves = $a / 12;
@@ -34,26 +25,40 @@ function getDayOfTheWeek($year, $month, $day){
       $total = $total + 6;
     }
 
+    function isLeapYear($year){
+      if($year % 4 == 0){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    if ($month == 1 && $year % 4 == 0){
+      $total = $total - 1;
+    } else if ($month == 2 && $year % 4 == 0){
+      $total = $total - 1;
+    }
+
     $total2 = $total % 7;
   
     if ($total2 == 0){
-      echo "Saturday";
+      echo "Saturday". "<br>";
     } else if ($total2 == 1){
-      echo "Sunday";
+      echo "Sunday". "<br>";
     } else if ($total2 == 2){
-      echo "Monday";
+      echo "Monday". "<br>";
     } else if ($total2 == 3){
-      echo "Tuesday";
+      echo "Tuesday". "<br>";
     } else if ($total2 == 4){
-      echo "Wednesday";
+      echo "Wednesday". "<br>";
     } else if ($total2 == 5){
-      echo "Thursday";
+      echo "Thursday". "<br>";
     } else if ($total2 == 6){
-      echo "Friday";
+      echo "Friday" . "<br>";
     }
 
 }
-  getDayOfTheWeek(2022, 01, 01);
+  getDayOfTheWeek(1989, 9, 16);
 
 
 function makeCalendar(){
@@ -62,67 +67,87 @@ function makeCalendar(){
 
         
     for ($x = 1; $x <= 31; $x++){
-      $string .= "1-" . $x . "-2022 is a " . $day . "<br>";
+      foreach ($date as $dates) {
+      $string .= "1-" . $x . "-2022 is a " . $dates . "<br>";
   }
-
-  foreach ($date as $dates) {}
-  
-    
+}
     echo $string;
 
     for ($x = 1; $x <= 28; $x++){
-      $string2 .= "2-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string2 .= "2-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string2;
     
     for ($x = 1; $x <= 31; $x++){
-      $string3 .= "3-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string3 .= "3-" . $x . "-2022 is a " . $dates .  "<br>";
     }
+  }
     echo $string3;
     
     for ($x = 1; $x <= 30; $x++){
-      $string4 .= "4-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string4 .= "4-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string4;
     
     for ($x = 1; $x <= 31; $x++){
-      $string5 .= "5-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string5 .= "5-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string5;
     
     for ($x = 1; $x <= 30; $x++){
-      $string6 .= "6-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string6 .= "6-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string6;
     
     for ($x = 1; $x <= 31; $x++){
-      $string7 .= "7-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string7 .= "7-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string7;
     
     for ($x = 1; $x <= 31; $x++){
-      $string8 .= "8-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string8 .= "8-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string8;
     
     for ($x = 1; $x <= 30; $x++){
-      $string9 .= "9-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string9 .= "9-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string9;
     
     for ($x = 1; $x <= 31; $x++){
-      $string10 .= "10-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string10 .= "10-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string10;
     
     for ($x = 1; $x <= 30; $x++){
-      $string11 .= "11-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string11 .= "11-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string11;
     
     for ($x = 1; $x <= 31; $x++){
-      $string12 .= "12-" . $x . "-2022 is a " . "<br>";
+      foreach ($date as $dates) {
+      $string12 .= "12-" . $x . "-2022 is a " . $dates . "<br>";
     }
+  }
     echo $string12;
   
   }
