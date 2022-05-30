@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1> HTML Form Lab </h1>
+
+    <form action ="./lab3.php" method ="post">
+        <input type = "text" name = "username" id = "username" />
+        <label for = "username">Username</label><br />
+
+        <input type = "password" name = "password" id = "password" />
+        <label for = "password">Password</label><br  />
+
+        <input type = "text" name = "studentnumber" id = "studentnumber" />
+        <label for = "studentnumber">Student Number</label><br /><br />
+
+        <input type = "radio" id = "male" name = "gender[]" value = "male" />
+        <label for = "male">Male</label><br />
+
+        <input type = "radio" id = "female" name = "gender[]" value = "female" />
+        <label for = "female">Female</label><br /><br />
+
+        <p>What computer languages are you studying?</p>
+        <input type="checkbox" id="c++" name="languages[]" value="c++">
+        <label for="c++"> I study C++</label><br />
+        
+        <input type="checkbox" id="c#" name="languages[]" value="c#">
+        <label for="c#"> I study C#</label><br />
+        
+        <input type="checkbox" id="javascript" name="languages[]" value="javascript">
+        <label for="javascript"> I study javascript</label><br />
+
+        <input type="checkbox" id="java" name="languages[]" value="java">
+        <label for="java"> I study javascript</label><br />
+
+        <input type="checkbox" id="perl" name="languages[]" value="perl">
+        <label for="perl"> I study Perl</label><br />
+
+        <input type="checkbox" id="php" name="languages[]" value="php">
+        <label for="php"> I study PHP</label><br />
+
+        <input type="checkbox" id="python" name="languages[]" value="python">
+        <label for="python"> I study Python</label><br /><br />
+
+        <input type="submit" value="Submit" />
+
+    </form>
+
+</body>
+</html>
 
